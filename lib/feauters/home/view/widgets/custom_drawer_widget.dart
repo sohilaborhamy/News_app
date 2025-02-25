@@ -43,6 +43,7 @@ class CustomDrawerWidget extends StatelessWidget {
             "News App",
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
+              color: Colors.black
             ),
           ),
         ),

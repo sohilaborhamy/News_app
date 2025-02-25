@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import '../../feauters/home/view/home_view.dart';
+import '../../feauters/search/search_view.dart';
 import '../../feauters/splash/splash_screen.dart';
 import 'name_routes_screen.dart';
 
@@ -14,7 +15,9 @@ abstract class AppRoutes {
              case ScreenRouteName.homeView:
         return MaterialPageRoute(
             builder: (context) => const HomeView(), settings: settings);
-      
+      case ScreenRouteName.searchView:
+        return MaterialPageRoute(
+            builder: (context) => const SearchView(), settings: settings);
       
             
             default :

@@ -56,12 +56,12 @@ class CustomTextField extends StatefulWidget {
     this.focusNode,
     this.textDirection,
     this.edgeInsets = const EdgeInsets.only(
-      top: 14,
-      left: 16,
+      top: 16,
+      left: 12,
       right: 16,
       bottom: 14,
-    ),
-    this.hintColor = Colors.black,
+    ), this.hintColor,
+   
   });
 
   @override

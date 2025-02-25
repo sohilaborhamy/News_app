@@ -15,7 +15,17 @@ abstract class AppThemeManager {
         fontWeight: FontWeight.w500,
         color: ColorsApp.primaryColorLight
       )
-      
+   
+    ),
+    textTheme: const TextTheme(headlineSmall: TextStyle(
+      color: ColorsApp.primaryColorLight
+    ),
+    titleMedium: TextStyle(
+      color: ColorsApp.primaryColorLight
+    ),
+     bodyMedium: TextStyle(
+      color: ColorsApp.primaryColorLight
+    )
     ),
   
   );
@@ -24,7 +34,25 @@ abstract class AppThemeManager {
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.transparent,
+      iconTheme: IconThemeData(color: Colors.white),
+      titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w500,
+        color: ColorsApp.backgroundColorLight
+      )
     ),
+    textTheme: const TextTheme(headlineSmall: TextStyle(
+      color: ColorsApp.backgroundColorLight
+    ),
+     titleMedium: TextStyle(
+      color: ColorsApp.backgroundColorLight
+    ),
+    bodyMedium: TextStyle(
+      color: ColorsApp.backgroundColorLight
+    )
+    
+    ),
+   
   
   );
 }

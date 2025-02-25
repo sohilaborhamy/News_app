@@ -4,7 +4,7 @@ class ArticleModel {
 
   ArticleModel({
     required this.status,
-    required this.articles,
+    required this.articles, 
   });
 
   factory ArticleModel.fromJson(Map<String, dynamic> json) => ArticleModel(
@@ -13,7 +13,7 @@ class ArticleModel {
             .map(
               (element) => Article.fromJson(element),
             )
-            .toList(),
+            .toList(), 
       );
 }
 

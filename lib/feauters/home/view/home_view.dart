@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/core/extensions/extensions.dart';
+import 'package:new_app/core/routes/name_routes_screen.dart';
 import 'package:provider/provider.dart';
-
 
 import '../view_model/home_view_model.dart';
 import 'widgets/category_home_view.dart';
@@ -27,10 +27,15 @@ class _HomeViewState extends State<HomeView> {
               : provider.selectedCategory!.categoryID,
         ),
         actions: [
-          const Icon(
-            Icons.search,
-            size: 30,
-          ).setHorizontalPadding(context, 0.04),
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, ScreenRouteName.searchView);
+            },
+            icon: const Icon(
+              Icons.search,
+              size: 30,
+            ).setHorizontalPadding(context, 0.02),
+          ),
         ],
       ),
       drawer: CustomDrawerWidget(),

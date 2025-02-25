@@ -7,13 +7,13 @@ import '../../../data/models/category_model.dart';
 import '../../../data/models/source_model.dart';
 import '../../../data/network/api_network.dart';
 
-
 class HomeViewModel extends ChangeNotifier {
   CategoryDataModel? _selectedCategory;
   int _selectedTabIndex = 0;
 
   List<Source> _sourceList = [];
   List<Article> _articlesList = [];
+
   final List<CategoryDataModel> _categoriesList = [
     CategoryDataModel(
       categoryID: "general",
@@ -32,8 +32,7 @@ class HomeViewModel extends ChangeNotifier {
     ),
     CategoryDataModel(
       categoryID: "technology",
-      categoryName:
-          "Technology",
+      categoryName: "Technology",
       categoryImg: "assets/images/technology.png",
     ),
     CategoryDataModel(
@@ -64,7 +63,7 @@ class HomeViewModel extends ChangeNotifier {
   void setSelectedSource(int index) {
     _selectedTabIndex = index;
 
-   getAllArticles();
+    getAllArticles();
 
     log("${_selectedTabIndex.toString()} ----- index");
     notifyListeners();
@@ -83,20 +82,20 @@ class HomeViewModel extends ChangeNotifier {
 
   Future<bool> getAllSources() async {
     try {
-     _sourceList = await ApiNetwork.getAllSources(
+      _sourceList = await ApiNetwork.getAllSources(
         _selectedCategory!.categoryID,
       );
-     notifyListeners();
-     return Future.value(true);
-   } catch (error) {
-   return Future.value(false);
-   }
+      notifyListeners();
+      return Future.value(true);
+    } catch (error) {
+      return Future.value(false);
+    }
   }
 
   Future<void> getAllArticles() async {
-  _articlesList = await ApiNetwork.getAllArticles(
-     _sourceList[_selectedTabIndex].id,
-  );
-  notifyListeners();
+    _articlesList = await ApiNetwork.getAllArticles(
+      _sourceList[_selectedTabIndex].id,
+    );
+    notifyListeners();
   }
 }

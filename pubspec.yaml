@@ -48,6 +48,7 @@ dependencies:
   http: 
   cached_network_image: 
   skeletonizer: 
+  url_launcher: 
 
 
 dev_dependencies:
@@ -77,6 +78,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
